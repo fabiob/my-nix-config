@@ -62,6 +62,9 @@
   services.displayManager.gdm.enable = true;
   services.desktopManager.gnome.enable = true;
 
+  # Enables Wayland support for Electron Apps
+  environment.sessionVariables.NIXOS_OZONE_WL = "1";
+
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
