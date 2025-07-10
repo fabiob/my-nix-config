@@ -7,14 +7,20 @@
   users.users.fabio = {
     isNormalUser = true;
     description = "Fábio Batista";
-    extraGroups = [ "networkmanager" "wheel" "docker" ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+      "docker"
+    ];
     packages = with pkgs; [
     ];
   };
 
   home-manager.useGlobalPkgs = true;
-  home-manager.users.fabio = { pkgs, ... }: {
-    programs.bash.enable = true;
-    home.stateVersion = "25.05";
-  };
+  home-manager.users.fabio =
+    { pkgs, ... }:
+    {
+      programs.bash.enable = true;
+      home.stateVersion = "25.05";
+    };
 }
