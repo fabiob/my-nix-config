@@ -23,8 +23,6 @@
     megasync
     solaar
     morewaita-icon-theme
-    networkmanager-openconnect
-    openconnect
     vesktop
 
     # DevOps CLI
