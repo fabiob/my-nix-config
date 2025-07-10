@@ -8,6 +8,9 @@
   # Install firefox.
   programs.firefox.enable = true;
 
+  # Sets vim as the default editor for all users
+  environment.sessionVariables.EDITOR = "vim";
+
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
 
