@@ -41,6 +41,7 @@
     docker-buildx
     fnm # Fast Node Manager
     git
+    gnumake
     rbenv
     sops
     uv
