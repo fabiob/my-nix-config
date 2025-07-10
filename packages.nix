@@ -79,6 +79,8 @@
     polkitPolicyOwners = [ "fabio" ];
   };
 
+  programs.direnv.enable = true;
+
   programs.gnupg.agent.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
