@@ -10,6 +10,7 @@
     ./nvidia.nix
     ./packages.nix
     ./home-manager.nix
+    ./virtualization.nix
   ];
 
   # Bootloader.

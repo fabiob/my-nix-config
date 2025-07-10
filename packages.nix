@@ -58,20 +58,6 @@
     nss_latest
   ];
 
-  # Docker
-  virtualisation.docker = {
-    enable = false;
-
-    rootless = {
-      enable = true;
-      setSocketVariable = true;
-      daemon.settings = {
-        dns = [ "1.1.1.1" "8.8.8.8" ];
-        registry-mirrors = [ "https://mirror.gcr.io" ];
-      };
-    };
-  };
-
   # 1Password
   programs._1password.enable = true;
   programs._1password-gui = {
