@@ -13,6 +13,9 @@
     ./virtualization.nix
   ];
 
+  # Enables flakes and the nix command without the pesky experimental warnings
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
