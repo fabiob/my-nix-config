@@ -24,7 +24,7 @@
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
   systemd.sleep.extraConfig = ''
-    AllowSuspend=no
+    AllowSuspend=yes
     AllowHibernation=no
     AllowHybridSleep=no
     AllowSuspendThenHibernate=no
