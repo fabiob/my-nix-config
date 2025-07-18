@@ -18,7 +18,7 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    # Generic user tools
+    # Generic GUI tools
     flameshot # Powerful yet simple to use screenshot software
     google-chrome # Freeware web browser developed by Google
     jetbrains-toolbox # Jetbrains Toolbox
@@ -26,7 +26,6 @@
     solaar # Linux devices manager for the Logitech Unifying Receiver
     morewaita-icon-theme # Adwaita style extra icons theme for Gnome Shell
     vesktop # Alternate client for Discord with Vencord built-in
-    z-lua # New cd command that helps you navigate faster by learning your habits 
 
     # DevOps CLI
     awscli2 # Unified tool to manage your AWS services
@@ -62,6 +61,7 @@
     gnupg # Modern release of the GNU Privacy Guard, a GPL OpenPGP implementation
     comma # Runs programs without installing them
     broot # Interactive tree view, a fuzzy search, a balanced BFS descent and customizable commands
+    z-lua # New cd command that helps you navigate faster by learning your habits 
   ];
 
   # 1Password
