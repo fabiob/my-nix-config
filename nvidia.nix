@@ -1,6 +1,5 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
+# This file contains configuration specific to the NVidia hardware.
+# Hopefully we'll replace the GPU to a more open architecture in the future.
 
 { config, pkgs, ... }:
 
