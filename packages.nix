@@ -26,6 +26,10 @@
     solaar # Linux devices manager for the Logitech Unifying Receiver
     morewaita-icon-theme # Adwaita style extra icons theme for Gnome Shell
     vesktop # Alternate client for Discord with Vencord built-in
+    libreoffice-fresh # Comprehensive, professional-quality productivity suite, a variant of openoffice.org
+    hunspell # Spell checker
+    hunspellDicts.pt_BR # Hunspell dictionary for Portuguese (Brazil) from LibreOffice
+    hunspellDicts.en_US # Hunspell dictionary for English (United States) from Wordlist
 
     # DevOps CLI
     awscli2 # Unified tool to manage your AWS services
