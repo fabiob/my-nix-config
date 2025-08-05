@@ -16,6 +16,26 @@
   # Enables flakes and the nix command without the pesky experimental warnings
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
+  # Collect garbage automatically, every week
+  nix.gc.automatic = true;
+  nix.gc.dates = "weekly";
+
+  # Deduplicate store files
+  nix.settings.auto-optimise-store = true;
+
+  # Keep store blobs for old generations up to 30 days
+  nix.gc.options = "--delete-older-than 30d";
+
+  # Limit the number of generations to show on boot
+  boot.loader.systemd-boot.configurationLimit = 10;
+
+  # Reports updated packages after an upgrade
+  system.activationScripts.diff = ''
+    if [[ -e /run/current-system ]]; then
+      ${pkgs.nix}/bin/nix store diff-closures /run/current-system "$systemConfig"
+    fi
+  '';
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
