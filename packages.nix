@@ -9,6 +9,9 @@
   programs.firefox.enable = true;
   programs.chromium.enable = true;
 
+  # Enables the Gnome Keyring
+  programs.seahorse.enable = true;
+
   # Sets vim as the default editor for all users
   environment.sessionVariables.EDITOR = "vim";
 
