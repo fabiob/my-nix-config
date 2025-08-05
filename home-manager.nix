@@ -50,6 +50,10 @@
         broot.enable = true;
         broot.enableBashIntegration = true;
 
+        z-lua.enable = true;
+        z-lua.enableBashIntegration = true;
+        z-lua.options = [ "enhanced" "echo" ];
+
         direnv = {
           enable = true;
           enableBashIntegration = true; # see note on other shells below

@@ -65,7 +65,6 @@
     gnupg # Modern release of the GNU Privacy Guard, a GPL OpenPGP implementation
     comma # Runs programs without installing them
     broot # Interactive tree view, a fuzzy search, a balanced BFS descent and customizable commands
-    z-lua # New cd command that helps you navigate faster by learning your habits 
   ];
 
   # 1Password
