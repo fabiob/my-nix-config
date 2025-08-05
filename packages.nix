@@ -33,17 +33,8 @@
     hunspell # Spell checker
     hunspellDicts.pt_BR # Hunspell dictionary for Portuguese (Brazil) from LibreOffice
     hunspellDicts.en_US # Hunspell dictionary for English (United States) from Wordlist
-
-    # DevOps CLI
-    awscli2 # Unified tool to manage your AWS services
-    (azure-cli.withExtensions [ azure-cli.extensions.aks-preview ]) # Next generation multi-platform command line experience for Azure
-    cloudlens # K9s like CLI for AWS and GCP
-    eks-node-viewer # Tool to visualize dynamic node usage within a cluster
-    helmfile # Declarative spec for deploying Helm charts
-    k9s # Kubernetes CLI To Manage Your Clusters In Style
-    kubectl # Kubernetes CLI
-    kubernetes-helm # Package manager for kubernetes
-    opentofu # Tool for building, changing, and versioning infrastructure
+    typora # Markdown editor, a markdown reader
+    radiotray-ng # Internet radio player for linux
 
     # Development CLI
     bat # Cat(1) clone with syntax highlighting and Git integration
@@ -54,8 +45,6 @@
     gnumake # Tool to control the generation of non-source files from sources
     jq # Lightweight and flexible command-line JSON processor
     nixfmt-rfc-style # Official formatter for Nix code
-    sops # Simple and flexible tool for managing secrets
-    uv # Extremely fast Python package installer and resolver, written in Rust
     vim # Most popular clone of the VI editor
     yq-go # Portable command-line YAML processor
 
