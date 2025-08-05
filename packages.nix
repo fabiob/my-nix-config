@@ -5,7 +5,7 @@
 { config, pkgs, ... }:
 
 {
-  # Install firefox.
+  # Install Firefox and Chromium
   programs.firefox.enable = true;
   programs.chromium.enable = true;
 
