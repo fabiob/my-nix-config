@@ -35,6 +35,7 @@
     hunspellDicts.en_US # Hunspell dictionary for English (United States) from Wordlist
     typora # Markdown editor, a markdown reader
     radiotray-ng # Internet radio player for linux
+    gimp3-with-plugins # GNU Image Manipulation Program
 
     # Development CLI
     bat # Cat(1) clone with syntax highlighting and Git integration
