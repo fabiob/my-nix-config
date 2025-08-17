@@ -2,7 +2,6 @@
 # Hopefully we'll replace the GPU to a more open architecture in the future.
 
 { config, pkgs, ... }:
-
 {
   # Enable OpenGL
   hardware.graphics = {
@@ -11,6 +10,9 @@
 
   # Load nvidia driver for Xorg and Wayland
   services.xserver.videoDrivers = [ "nvidia" ];
+
+  # Fix for the GTK4 freeze-on-close bug: https://forums.developer.nvidia.com/t/580-release-feedback-discussion/341205/20
+  environment.sessionVariables.GSK_RENDERER = "ngl";
 
   hardware.nvidia = {
 
