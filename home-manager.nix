@@ -80,6 +80,9 @@
 
         starship.enable = true;
       };
+
+      home.file."idea.properties".text = "idea.filewatcher.executable.path = ${pkgs.fsnotifier}/bin/fsnotifier";
+
       home.stateVersion = "25.05";
     };
 }
