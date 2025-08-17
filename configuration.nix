@@ -43,6 +43,15 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
+  # Double inotify limits
+  boot.kernel.sysctl = {
+    "fs.inotify.max_queued_events"  =   32768;
+    "fs.inotify.max_user_instances" = 1048576;
+    "fs.inotify.max_user_watches"   = 1048576;
+    "user.max_inotify_instances"    = 1048576;
+    "user.max_inotify_watches"      = 1048576;
+  };
+
   systemd.sleep.extraConfig = ''
     AllowSuspend=no
     AllowHibernation=no
