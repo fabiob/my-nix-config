@@ -121,6 +121,13 @@
     #media-session.enable = true;
   };
 
+  services.avahi = {
+    enable = true;
+    nssmdns4 = true;
+    nssmdns6 = true;
+    publish.enable = true;
+  };
+
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 
