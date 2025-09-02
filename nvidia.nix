@@ -14,6 +14,19 @@
   # Fix for the GTK4 freeze-on-close bug: https://forums.developer.nvidia.com/t/580-release-feedback-discussion/341205/20
   environment.sessionVariables.GSK_RENDERER = "ngl";
 
+  # Enables local LLMs
+  nixpkgs.config.cudaSupport = true;
+  services.ollama = {
+    enable = true;
+    loadModels = [
+      "qwen3-coder"
+    ];
+  };
+
+  environment.systemPackages = [
+    pkgs.nvtopPackages.nvidia # htop-like task monitor for AMD, Adreno, Intel and NVIDIA GPUs
+  ];
+
   hardware.nvidia = {
 
     # Modesetting is required.
