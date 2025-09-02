@@ -28,6 +28,7 @@
   users.groups.libvirtd.members = ["fabio"];
 
   virtualisation.libvirtd.enable = true;
+  virtualisation.libvirtd.qemu.runAsRoot = false;
   virtualisation.spiceUSBRedirection.enable = true;
 
   home-manager.users.fabio.dconf.settings = {
