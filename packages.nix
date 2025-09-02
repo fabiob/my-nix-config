@@ -12,6 +12,9 @@
   # Enables the Gnome Keyring
   programs.seahorse.enable = true;
 
+  # Enables the GPaste clipboard manager
+  programs.gpaste.enable = true;
+
   # Sets vim as the default editor for all users
   environment.sessionVariables.EDITOR = "vim";
 
@@ -29,13 +32,18 @@
     solaar # Linux devices manager for the Logitech Unifying Receiver
     morewaita-icon-theme # Adwaita style extra icons theme for Gnome Shell
     vesktop # Alternate client for Discord with Vencord built-in
+    typora # Markdown editor, a markdown reader
+    radiotray-ng # Internet radio player for linux
+    gimp3-with-plugins # GNU Image Manipulation Program
+    mission-center # Monitor your CPU, Memory, Disk, Network and GPU usage
+
+    # LibreOffice
     libreoffice-fresh # Comprehensive, professional-quality productivity suite, a variant of openoffice.org
     hunspell # Spell checker
     hunspellDicts.pt_BR # Hunspell dictionary for Portuguese (Brazil) from LibreOffice
     hunspellDicts.en_US # Hunspell dictionary for English (United States) from Wordlist
-    typora # Markdown editor, a markdown reader
-    radiotray-ng # Internet radio player for linux
-    gimp3-with-plugins # GNU Image Manipulation Program
+    hyphen # Text hyphenation library
+    hyphenDicts.en_US
 
     # Development CLI
     bat # Cat(1) clone with syntax highlighting and Git integration
