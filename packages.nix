@@ -5,8 +5,7 @@
 { config, pkgs, ... }:
 
 {
-  # Install Firefox and Chromium
-  programs.firefox.enable = true;
+  # Install Chromium
   programs.chromium.enable = true;
 
   # Enables the Gnome Keyring
