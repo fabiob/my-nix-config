@@ -124,6 +124,10 @@
     #media-session.enable = true;
   };
 
+  hardware.bluetooth.settings = {
+    General.Experimental = true;
+  };
+
   services.avahi = {
     enable = true;
     nssmdns4 = true;
