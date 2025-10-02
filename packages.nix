@@ -58,6 +58,7 @@
 
     # Other CLI
     age # Modern encryption tool with small explicit keys
+    duf # Disk Usage/Free Utility
     dust # du + rust = dust. Like du but more intuitive
     ripgrep # Utility that combines the usability of The Silver Searcher with the raw speed of grep
     eza # Modern, maintained replacement for ls
