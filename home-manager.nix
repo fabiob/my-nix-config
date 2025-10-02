@@ -83,6 +83,13 @@
         broot.enable = true;
         broot.enableBashIntegration = true;
 
+        fzf.enable = true;
+        fzf.enableBashIntegration = true;
+
+        mcfly.enable = true;
+        mcfly.fzf.enable = true;
+        mcfly.enableBashIntegration = true;
+
         z-lua.enable = true;
         z-lua.enableBashIntegration = true;
         z-lua.options = [
@@ -92,7 +99,7 @@
 
         direnv = {
           enable = true;
-          enableBashIntegration = true; # see note on other shells below
+          enableBashIntegration = true;
           nix-direnv.enable = true;
         };
 
