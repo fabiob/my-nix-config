@@ -18,9 +18,6 @@
   nixpkgs.config.cudaSupport = true;
   services.ollama = {
     enable = true;
-    loadModels = [
-      "qwen3-coder"
-    ];
   };
 
   environment.systemPackages = [
