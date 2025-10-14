@@ -74,6 +74,7 @@
         entries = [
           "${pkgs.solaar}/share/applications/solaar.desktop"
           "${pkgs.jetbrains-toolbox}/share/applications/jetbrains-toolbox.desktop"
+          "${pkgs._1password-gui}/share/applications/1password.desktop"
         ];
       };
 
