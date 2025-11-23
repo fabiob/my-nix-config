@@ -138,6 +138,11 @@
     publish.enable = true;
   };
 
+  services.solaar = {
+    enable = true;
+    window = "hide";
+  };
+
   # Enable touchpad support (enabled default in most desktopManager).
   # services.xserver.libinput.enable = true;
 

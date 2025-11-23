@@ -28,7 +28,6 @@
     google-chrome # Freeware web browser developed by Google
     jetbrains-toolbox # Jetbrains Toolbox
     megasync # Easy automated syncing between your computers and your MEGA Cloud Drive
-    solaar # Linux devices manager for the Logitech Unifying Receiver
     morewaita-icon-theme # Adwaita style extra icons theme for Gnome Shell
     vesktop # Alternate client for Discord with Vencord built-in
     slack # Desktop client for Slack
