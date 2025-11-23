@@ -31,12 +31,14 @@
     solaar # Linux devices manager for the Logitech Unifying Receiver
     morewaita-icon-theme # Adwaita style extra icons theme for Gnome Shell
     vesktop # Alternate client for Discord with Vencord built-in
+    slack # Desktop client for Slack
     typora # Markdown editor, a markdown reader
     radiotray-ng # Internet radio player for linux
     gimp3-with-plugins # GNU Image Manipulation Program
     mission-center # Monitor your CPU, Memory, Disk, Network and GPU usage
 
-    # LibreOffice
+    # LibreOffice and OnlyOffice
+    onlyoffice-desktopeditors
     libreoffice-fresh # Comprehensive, professional-quality productivity suite, a variant of openoffice.org
     hunspell # Spell checker
     hunspellDicts.pt_BR # Hunspell dictionary for Portuguese (Brazil) from LibreOffice
@@ -89,6 +91,12 @@
 
   # Enable the OpenSSH daemon.
   services.openssh.enable = true;
+
+  #services.nix-serve = {
+  #  enable = true;
+  #  openFirewall = true;
+  #  secretKeyFile = "/misc/nix-serve/cache-priv-key.pem";
+  #};
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

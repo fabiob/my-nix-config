@@ -1,8 +1,8 @@
 # Configuration related to the existing users and the home-manager configuration.
 
-{ config, pkgs, ... }:
+{ inputs, lib, config, pkgs, ... }:
 {
-  imports = [ <home-manager/nixos> ];
+  imports = [ inputs.home-manager.nixosModules.home-manager ];
 
   nix.settings.trusted-users = [
     "root"
@@ -72,7 +72,6 @@
       xdg.autostart = {
         enable = true;
         entries = [
-          "${pkgs.solaar}/share/applications/solaar.desktop"
           "${pkgs.jetbrains-toolbox}/share/applications/jetbrains-toolbox.desktop"
           "${pkgs._1password-gui}/share/applications/1password.desktop"
         ];
@@ -90,6 +89,9 @@
         mcfly.enable = true;
         mcfly.fzf.enable = true;
         mcfly.enableBashIntegration = true;
+        mcfly.interfaceView = "BOTTOM";
+        mcfly.keyScheme = "vim";
+        mcfly.fuzzySearchFactor = 3;
 
         z-lua.enable = true;
         z-lua.enableBashIntegration = true;
@@ -106,7 +108,15 @@
 
         starship.enable = true;
 
-        kitty.enable = true;
+        kitty = {
+          enable = true;
+          keybindings = {
+            "ctrl+shift+t" = "new_tab_with_cwd";
+            "ctrl+shift+enter" = "launch --type=window --cwd=current";
+            "ctrl+k" = "clear_terminal to_cursor_scroll active";
+            "ctrl+shift+k" = "combine : clear_terminal scroll active : clear_terminal scrollback active";
+          };
+        };
       };
 
       home.file."idea.properties".text =

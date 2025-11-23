@@ -27,6 +27,7 @@
   programs.virt-manager.enable = true;
 
   users.groups.libvirtd.members = ["fabio"];
+  users.users.fabio.linger = true; # Essential for the user services to persist after logout
 
   virtualisation.libvirtd.enable = true;
   virtualisation.libvirtd.qemu.runAsRoot = false;

@@ -125,7 +125,10 @@
   };
 
   hardware.bluetooth.settings = {
-    General.Experimental = true;
+    General = {
+      Experimental = true;
+      ControllerMode = "dual";
+    };
   };
 
   services.avahi = {
