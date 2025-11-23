@@ -11,6 +11,7 @@
     ./packages.nix
     ./home-manager.nix
     ./virtualization.nix
+    ../shared/scripts.nix
   ];
 
   # Enables flakes and the nix command without the pesky experimental warnings
