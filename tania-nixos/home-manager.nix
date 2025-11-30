@@ -6,23 +6,26 @@
 
   nix.settings.trusted-users = [
     "root"
-    "fabio"
+    "tania"
   ];
 
-  users.users.fabio = {
+  users.users.tania = {
     isNormalUser = true;
-    description = "Fábio Batista";
+    description = "Tania Nielsen";
     extraGroups = [
       "networkmanager"
       "wheel"
       "docker"
+    ];
+    openssh.authorizedKeys.keys = [
+      "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGO49ie+2Uy4jBeO7VzRoQp58LeSyg5lvtKiQRPXBbre fabio@fabio-nixos"
     ];
     packages = with pkgs; [
     ];
   };
 
   home-manager.useGlobalPkgs = true;
-  home-manager.users.fabio =
+  home-manager.users.tania =
     { pkgs, ... }:
     let
       defaultMonoFont = {
@@ -30,36 +33,15 @@
         package = pkgs.nerd-fonts.adwaita-mono;
         size = 11;
       };
-      flameshot-gui = pkgs.writeShellScriptBin "flameshot-gui" "${pkgs.flameshot}/bin/flameshot gui";
     in
     {
       home.packages = [ defaultMonoFont.package ];
 
-      # Changes the default font
       fonts.fontconfig.enable = true;
+
       dconf.settings = {
         "org/gnome/desktop/interface" = {
           monospace-font-name = "${defaultMonoFont.name} ${toString defaultMonoFont.size}";
-        };
-      };
-
-      # Adds flameshot as the default PtrScr keybinding
-      dconf.settings = {
-        # Disables the default screenshot interface
-        "org/gnome/shell/keybindings" = {
-          show-screenshot-ui = [ ];
-        };
-        # Sets the new keybindings
-        "org/gnome/settings-daemon/plugins/media-keys" = {
-          custom-keybindings = [
-            "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0/"
-          ];
-        };
-        # Defines the new shortcut
-        "org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/custom0" = {
-          binding = "Print";
-          command = "${flameshot-gui}/bin/flameshot-gui";
-          name = "Flameshot";
         };
       };
 

@@ -8,40 +8,26 @@
   imports = [
     ../shared/base.nix
     ./hardware-configuration.nix
-    ./nvidia.nix
     ./packages.nix
     ./home-manager.nix
     ./virtualization.nix
     ../shared/scripts.nix
   ];
 
-  # Double inotify limits
-  boot.kernel.sysctl = {
-    "fs.inotify.max_queued_events"  =   32768;
-    "fs.inotify.max_user_instances" = 1048576;
-    "fs.inotify.max_user_watches"   = 1048576;
-    "user.max_inotify_instances"    = 1048576;
-    "user.max_inotify_watches"      = 1048576;
-  };
-
-  systemd.sleep.extraConfig = ''
-    AllowSuspend=no
-    AllowHibernation=no
-    AllowHybridSleep=no
-    AllowSuspendThenHibernate=no
-  '';
-
   # Enable Logitech udev rules
   hardware.logitech.wireless.enable = true;
 
-  networking.hostName = "fabio-nixos"; # Define your hostname.
+  networking.hostName = "tania-nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure keymap in X11
   services.xserver.xkb = {
     layout = "us";
-    variant = "altgr-intl";
+    variant = "intl";
   };
+
+  # Configure console keymap
+  console.keyMap = "us-acentos";
 
   services.solaar = {
     enable = true;

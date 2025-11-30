@@ -28,6 +28,13 @@
             ./fabio-nixos/configuration.nix
           ];
         };
+        tania-nixos = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs outputs; };
+          modules = [
+            solaar.nixosModules.default
+            ./tania-nixos/configuration.nix
+          ];
+        };
       };
     };
 }
