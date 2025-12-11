@@ -21,13 +21,19 @@
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "intl";
-  };
+  services.xserver.xkb.layout = "us";
+  services.xserver.xkb.variant = "intl";
+  services.xserver.layout = "us";
+  services.xserver.xkbVariant = "intl";
 
   # Configure console keymap
-  console.keyMap = "us-acentos";
+  console.useXkbConfig = true;
+
+  # Configure iBus
+  i18n.inputMethod = {
+    enable = true;
+    type = "ibus";
+  };
 
   services.solaar = {
     enable = true;
