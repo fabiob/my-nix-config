@@ -10,19 +10,19 @@
     ./hardware-configuration.nix
     ./packages.nix
     ./virtualization.nix
-    ../shared/user-tania.nix
+    ../shared/user-fabio.nix
     ../shared/scripts.nix
     ../shared/logitech.nix
   ];
 
-  networking.hostName = "tania-nixos"; # Define your hostname.
+  networking.hostName = "lg-gram-i7"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure keymap in X11
-  services.xserver.xkb.layout = "us";
-  services.xserver.xkb.variant = "intl";
-  services.xserver.layout = "us";
-  services.xserver.xkbVariant = "intl";
+  services.xserver.xkb = {
+    layout = "us";
+    variant = "altgr-intl";
+  };
 
   # This value determines the NixOS release from which the default
   # settings for stateful data, like file locations and database versions

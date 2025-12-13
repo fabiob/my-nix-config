@@ -30,6 +30,15 @@
   # Use latest kernel.
   boot.kernelPackages = pkgs.linuxPackages_latest;
 
+  # Double inotify limits
+  boot.kernel.sysctl = {
+    "fs.inotify.max_queued_events"  =   32768;
+    "fs.inotify.max_user_instances" = 1048576;
+    "fs.inotify.max_user_watches"   = 1048576;
+    "user.max_inotify_instances"    = 1048576;
+    "user.max_inotify_watches"      = 1048576;
+  };
+
   # Enable networking
   networking.networkmanager.enable = true;
   networking.networkmanager.insertNameservers = [ "1.1.1.1" "8.8.8.8" "8.8.4.4" ];
@@ -53,6 +62,15 @@
     LC_PAPER = "pt_BR.UTF-8";
     LC_TELEPHONE = "pt_BR.UTF-8";
     LC_TIME = "pt_BR.UTF-8";
+  };
+
+  # Configure console keymap
+  console.useXkbConfig = true;
+
+  # Configure iBus
+  i18n.inputMethod = {
+    enable = true;
+    type = "ibus";
   };
 
   # Enable the X11 windowing system.

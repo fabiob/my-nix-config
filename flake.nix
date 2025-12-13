@@ -35,6 +35,13 @@
             ./tania-nixos/configuration.nix
           ];
         };
+        lg-gram-i7 = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs outputs; };
+          modules = [
+            solaar.nixosModules.default
+            ./lg-gram-i7/configuration.nix
+          ];
+        };
       };
     };
 }
