@@ -43,6 +43,13 @@
         };
       };
 
+      # Enables fractional scaling
+      dconf.settings = {
+        "org/gnome/mutter" = {
+          experimental-features = [ "scale-monitor-framebuffer" "xwayland-native-scaling" ];
+        };
+      };
+
       # Adds flameshot as the default PtrScr keybinding
       dconf.settings = {
         # Disables the default screenshot interface
