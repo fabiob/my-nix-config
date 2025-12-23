@@ -8,9 +8,9 @@
   imports = [
     ../shared/base.nix
     ./hardware-configuration.nix
-    ./packages.nix
-    ./virtualization.nix
-    ../shared/user-fabio.nix
+    ../tania-nixos/packages.nix
+    ../tania-nixos/virtualization.nix
+    ../shared/user-tania.nix
     ../shared/scripts.nix
     ../shared/logitech.nix
   ];
