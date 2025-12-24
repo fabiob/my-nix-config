@@ -45,9 +45,18 @@
   # Enable networking
   networking.networkmanager.enable = true;
   networking.networkmanager.insertNameservers = [ "1.1.1.1" "8.8.8.8" "8.8.4.4" ];
+  networking.networkmanager.connectionConfig."connection.mdns" = 2;
   networking.networkmanager.plugins = [
     pkgs.networkmanager-openconnect
   ];
+
+  services.avahi.enable = true;
+  services.resolved = {
+    enable = true;
+    extraConfig = ''
+      MulticastDNS=yes
+    '';
+  };
 
   # Set your time zone.
   time.timeZone = "America/Sao_Paulo";
@@ -110,12 +119,5 @@
       Experimental = true;
       ControllerMode = "dual";
     };
-  };
-
-  services.resolved = {
-    enable = true;
-    extraConfig = ''
-      MulticastDNS=yes
-    '';
   };
 }
