@@ -28,6 +28,12 @@
             ./fabio-nixos/configuration.nix
           ];
         };
+        marcel-nixos = nixpkgs.lib.nixosSystem {
+          specialArgs = { inherit inputs outputs; };
+          modules = [
+            ./marcel-nixos/configuration.nix
+          ];
+        };
         tania-nixos = nixpkgs.lib.nixosSystem {
           specialArgs = { inherit inputs outputs; };
           modules = [

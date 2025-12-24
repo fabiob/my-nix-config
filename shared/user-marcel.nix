@@ -1,8 +1,8 @@
 # Configuration related to the existing users and the home-manager configuration.
 
-{ config, pkgs, ... }:
+{ inputs, lib, config, pkgs, ... }:
 {
-  imports = [ <home-manager/nixos> ];
+  imports = [ inputs.home-manager.nixosModules.home-manager ];
 
   nix.settings.trusted-users = [
     "root"
@@ -17,10 +17,10 @@
       "wheel"
       "docker"
     ];
-    packages = with pkgs; [
-    ];
     openssh.authorizedKeys.keys = [
       "ssh-ed25519 AAAAC3NzaC1lZDI1NTE5AAAAIGO49ie+2Uy4jBeO7VzRoQp58LeSyg5lvtKiQRPXBbre fabio@fabio-nixos"
+    ];
+    packages = with pkgs; [
     ];
   };
 
@@ -67,9 +67,6 @@
       };
 
       home.shell.enableShellIntegration = true;
-      home.sessionPath = [
-        "$HOME/.local/share/JetBrains/Toolbox/scripts"
-      ];
 
       # Autostart some programs
       xdg.autostart = {
@@ -92,6 +89,9 @@
         mcfly.enable = true;
         mcfly.fzf.enable = true;
         mcfly.enableBashIntegration = true;
+        mcfly.interfaceView = "BOTTOM";
+        mcfly.keyScheme = "vim";
+        mcfly.fuzzySearchFactor = 3;
 
         z-lua.enable = true;
         z-lua.enableBashIntegration = true;
@@ -102,13 +102,21 @@
 
         direnv = {
           enable = true;
-          enableBashIntegration = true; # see note on other shells below
+          enableBashIntegration = true;
           nix-direnv.enable = true;
         };
 
         starship.enable = true;
 
-        kitty.enable = true;
+        kitty = {
+          enable = true;
+          keybindings = {
+            "ctrl+shift+t" = "new_tab_with_cwd";
+            "ctrl+shift+enter" = "launch --type=window --cwd=current";
+            "ctrl+k" = "clear_terminal to_cursor_scroll active";
+            "ctrl+shift+k" = "combine : clear_terminal scroll active : clear_terminal scrollback active";
+          };
+        };
       };
 
       home.file."idea.properties".text =

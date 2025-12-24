@@ -4,6 +4,9 @@
   # Install Chromium
   programs.chromium.enable = true;
 
+  # Enables the Gnome Keyring
+  programs.seahorse.enable = true;
+
   # Enables the GPaste clipboard manager
   programs.gpaste.enable = true;
 
@@ -25,7 +28,8 @@
     gimp3-with-plugins # GNU Image Manipulation Program
     mission-center # Monitor your CPU, Memory, Disk, Network and GPU usage
 
-    # LibreOffice
+    # LibreOffice and OnlyOffice
+    onlyoffice-desktopeditors
     libreoffice-fresh # Comprehensive, professional-quality productivity suite, a variant of openoffice.org
     hunspell # Spell checker
     hunspellDicts.pt_BR # Hunspell dictionary for Portuguese (Brazil) from LibreOffice
@@ -53,6 +57,7 @@
     eza # Modern, maintained replacement for ls
     psmisc # Set of small useful utilities that use the proc filesystem (such as fuser, killall and pstree)
     gnupg # Modern release of the GNU Privacy Guard, a GPL OpenPGP implementation
+    comma # Runs programs without installing them
     broot # Interactive tree view, a fuzzy search, a balanced BFS descent and customizable commands
   ];
 
@@ -62,6 +67,8 @@
     enable = true;
     polkitPolicyOwners = [ "marcel" ];
   };
+
+  programs.gnupg.agent.enable = true;
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
