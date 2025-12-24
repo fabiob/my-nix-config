@@ -1,7 +1,10 @@
 { config, pkgs, ... }:
 {
   # Enables flakes and the nix command without the pesky experimental warnings
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # Collect garbage automatically, every week
   nix.gc.automatic = true;
@@ -113,6 +116,14 @@
     enable = true;
     nssmdns4 = true;
     nssmdns6 = true;
-    publish.enable = true;
+    publish = {
+      enable = true;
+      addresses = true;
+      workstation = true;
+    };
   };
+
+  services.resolved.extraConfig = ''
+    MulticastDNS=yes
+  '';
 }
