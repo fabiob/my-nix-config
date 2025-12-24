@@ -112,18 +112,10 @@
     };
   };
 
-  services.avahi = {
+  services.resolved = {
     enable = true;
-    nssmdns4 = true;
-    nssmdns6 = true;
-    publish = {
-      enable = true;
-      addresses = true;
-      workstation = true;
-    };
+    extraConfig = ''
+      MulticastDNS=yes
+    '';
   };
-
-  services.resolved.extraConfig = ''
-    MulticastDNS=yes
-  '';
 }
