@@ -24,7 +24,6 @@
     google-chrome # Freeware web browser developed by Google
     jetbrains-toolbox # Jetbrains Toolbox
     morewaita-icon-theme # Adwaita style extra icons theme for Gnome Shell
-    vesktop # Alternate client for Discord with Vencord built-in
     gimp3-with-plugins # GNU Image Manipulation Program
     mission-center # Monitor your CPU, Memory, Disk, Network and GPU usage
 
