@@ -28,7 +28,6 @@
     vesktop # Alternate client for Discord with Vencord built-in
     slack # Desktop client for Slack
     typora # Markdown editor, a markdown reader
-    radiotray-ng # Internet radio player for linux
     gimp3-with-plugins # GNU Image Manipulation Program
     mission-center # Monitor your CPU, Memory, Disk, Network and GPU usage
 
