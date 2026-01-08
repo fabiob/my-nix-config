@@ -7,6 +7,7 @@
 {
   imports = [
     ../shared/base.nix
+    ../shared/cli-tools.nix
     ./hardware-configuration.nix
     ./packages.nix
     ./virtualization.nix
